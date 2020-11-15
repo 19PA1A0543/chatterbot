@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>KOOTHRAPALLI SERVICES</title>
+
+    </head>
+    <body>
+        <div class="buttons">
+            <button class="buttons" onclick="home()">HOME</button>
+            <button class="buttons" onclick="about()">ABOUT US</button>
+            <button class="buttons" onclick="contact()">CONTACT US</button>
+        </div><br><br>
+        <button class="buttons" style="float: right;" onclick="orders()">YOUR ORDERS</button>
+        <!-- <center><img src="https://justcreative.com/wp-content/uploads/2012/05/abc-logo.gif" alt="COMPANY LOGO"></center> -->
+        <CEnter><div>PLEASE HAVE YOUR ID FOR DETAILS <br>
+            <button class="buttons" onclick="bot()">TALK TO ALEX</button>
+
+        </div></CEnter>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background:url(https://wallpapers.net/3d-triangle-abstract-design-wallpaper-for-desktop-mobiles/download/3840x2160.jpg);
+                background-size: 90%;
+            }
+            button{
+                text-transform: uppercase;
+                text-decoration: none;
+                font-family: sans-serif;
+                box-sizing: border-box;
+                background: linear-gradient(90deg, #010742,#cf2323,#ffeb3b,#03a9f4);
+                background-size: 400%;
+                border-radius: 30px;
+                z-index: 1;
+
+            }
+            button:hover{
+                animation: animate 8s linear infinite;
+
+            }
+            @keyframes animate
+            {
+                0%
+                {
+                    background-position: 0%;
+                }
+                100%
+                {
+                    background-position: 400%;
+                }
+
+
+            }
+            button:before
+            {
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                right: -5px;
+                
+                z-index: -1;
+                background: linear-gradient(90deg, #03a9f4,#f441a5,#ffeb3b,#03a9f4);
+                background-size: 400%;
+                border-radius: 40px;
+                opacity: 0;
+                transition: 0.5s;
+            }
+            button:hover:before
+            {
+                filter: blur(20px);
+                opacity: 1;
+                animation: animate 8s linear infinite;
+            }
+            button{
+                width: 80px;
+                height: 39px;
+            }
+            .buttons{
+                color: azure;
+            }
+            .inputs{
+                color: azure;
+            }
+            .buttons{
+                color: azure;
+                top: 80%;
+            }
+            
+        </style>
+
+
+    </body>
+    <script>
+
+        function home(){
+            location.replace("main.html")
+        }
+        function about(){
+            location.replace("aboutus.html")
+        }
+        function contact(){
+            location.replace("contactus.html")
+        }
+        function orders(){
+            location.replace("orders.html")
+        }
+        function bot(){
+            location.replace("bot.html")
+        }
+    </script>
+</html>

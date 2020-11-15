@@ -1,0 +1,17 @@
+categories:
+- conversations
+conversations:
+- - Good Evening
+  - Good evening
+- - I want to report a player
+  - Yes sure redirecting to report page
+- - I want to see a players profile
+  - Yes sure. Redirecting to profiles page
+- - I want to contact you
+  - Yes sure. Opening contact Page
+- - I need to know about you
+  - Ok! See me here. Going to about us page
+- - Where can i see a players profile
+  - Yes I am taking you there. Going to profiles page
+- - Can I report a player
+  - Yes sure. Let me take you to the report page

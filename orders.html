@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>YOUR ORDERS</title>
+    </head>
+    <body>
+        <div class="order-title">
+            <h1>YOUR ORDERS</h1>
+            <H2>PLEASE SUBMIT YOUR ORDER ID</H2>
+            <H3>WE WILL TRACK YOUR SHIPMENT STATUS</H3>
+            <style>
+                body{
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+                    background: url(https://png.pngtree.com/thumb_back/fw800/background/20190718/pngtree-abstract-blue-wave-background-image_283796.jpg);
+                    background-size:120% 150%;
+                    background-repeat: no-repeat;
+                }
+
+            </style>
+
+
+
+        </div>
+        <div class="project">
+            <input type="text" id="id" placeholder="ENTER YOUR ORDER ID">
+            <button class="buttons" onclick="details(document.getElementById('id').value)">GET DETAILS</button>
+
+
+
+        </div>
+        <script>
+
+            function details(id){
+                location.replace("/orders.html/"+id)
+                // alert(id)
+                }
+        </script>
+        <center><img style="float: right;" src="{{order_image}}" alt="PLEASE CHECK YOUR CONNECTION"></center>
+        <CEnter><table style="text-align: right;">
+            <tr>
+                <th>NAME: </th>
+                <th style="text-align: left;">{{name}}</th>
+                
+            </tr>
+            <tr>
+                <th>CONTACT:   </th>
+                <TH style="text-align: left;">{{contact}}</TH>
+            </tr>
+            <tr>
+                <th>ID:  </th>
+                <th style="text-align: left;">{{id}}</th>
+            </tr>
+            <tr>
+                <th>ADDRESS:  </th>
+                <th style="text-align: left;">{{address}}</th>
+            </tr>
+            <tr>
+                <th>PRODUCT: </th>
+                <TH style="text-align: left;">{{product}}</TH>
+            </tr>
+            <tr>
+                <th>SHIPMENTSTATUS:  </th>
+                <th style="text-align: left;">{{shipment_details}}</th>
+
+            </tr>
+            <TR>
+                <th>ESTIMATED DELIVERY</th>
+                <th style="text-align: left;">{{estimated}}</th>
+            </TR>
+            <tr>
+                <th>DELAY</th>
+                <th style="text-align: left;">{{delay}}</th>
+            </tr>
+
+        </table></CEnter>
+
+
+
+    </body>
+
+
+
+</html>

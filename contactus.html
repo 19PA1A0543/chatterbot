@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>CONTACT US</title>
+    </head>
+</html>
+<body>
+    <div class="contact-title">
+        <h1>HEY THERE,</h1>
+        <h2>WE ARE ALWAYS READY TO HELP YOU .</h2>
+        <h3>FEEL FREE TO CONTACT US...</h3>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                text-align: center ;
+                background: linear-gradient(rgba(0,0,150,0.5),rgba(0,0,50,0.5)),url(https://lh3.googleusercontent.com/proxy/vCj2CUGo-6Sq6EN2MDsoELe-9DzBA8H2Ak9rJWYYNyalOYIIMOnF8d58gkvROqHt7OqWRhQccjKeFxC3h3w-dmxrPSVwZC0);
+                background-size: cover;
+                background-position: center;
+                font-family: sans-serif;
+            }
+            .contact-title{
+                margin-top: 100px;
+                color: linen;
+                text-transform:uppercase;
+                transition: all 4s ease-in-out;
+            }
+            .contact-title h1{
+                font-size: 32px;
+                line-height: 10px;
+            }
+            .contact-title h2{
+                font-size: 20px;
+            }
+            .contact-title h3{
+                font-size: 16px;
+            }
+
+        </style>
+    </div>
+    <div class="contact-form">
+        <form id="contact-form" method="POST" action="">
+            <input type="text" name="name" class="form-control" placeholder="YOUR NAME" required><br>
+
+            <input type="email" name="email" class="form-control" placeholder="YOUR EMAIL" required><br>
+
+            <textarea name="message" class="form-control" placeholder="MESSAGE" rows="4" required></textarea><br>
+
+
+            <input type="submit" class="form-control submit" value="SEND MESSAGE" onclick="send()">
+        </form>
+        <style>
+            form{
+                margin-top: 50px;
+                transition: all 4s ease-in-out;
+            }
+            .form-control{
+                width: 600px;
+                background:transparent ;
+                border: none;
+                outline: none;
+                border-bottom: 1px solid white;
+                color:white;
+                font-size: 18px;
+                margin-bottom: 16px;
+            }
+            input{
+                height: 45px;
+
+            }
+            form .submit{
+                background: #ff5722;
+                border-color: transparent;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 2px;
+                height: 50px;
+                margin-top: 20px;
+
+            }
+            form .submit:hover{
+                background-color: #f44336;
+                cursor: pointer;
+            }
+            .btnn{
+                width: 100px;
+                height: 35px;
+                background-color: black ;
+                color: blanchedalmond;
+
+            }
+            .btnn:hover{
+                background-color: coral;
+                transition: 0.5s;
+                transform: scale(1.1);
+                cursor: pointer;
+            
+            }
+            .mark{
+                background-color: rgba(0,0,50,0.5);
+                color: #ffd340;
+            }
+        </style>
+
+        <center>
+             <div class="btnn">
+            <button class="btnn" onclick="home()">BACK TO HOME</button>
+        </div></center>
+    </div><br><br><br><br><b></br>
+    <div class="mark"><MARquee>WRITE US @ KOOTHRAPALLISERVICE@GMAIL.COM, ALL RIGHTS RESERVED &#169 2020 .APPROVED BY GOVERNMENT OF ALEX MERCER</MARquee></div>
+    <script>
+
+        function home(){
+            location.replace("main.html")
+        }
+        function send(){
+            alert("THANK YOU FOR YOUR RESPONSE")
+        }
+    </script>
+</body>

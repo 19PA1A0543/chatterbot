@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<center><h1>Flask Chatbot</h1></center>
+<div>
+<center><div id = "chatbox">
+<p class = "botText"><span>Hi! I AM ALEX . ASK ME WHAT YOU NEED</span></p>
+</div>
+<div id = "userInput">
+<input style="color: aliceblue;" id ="textInput" type ="text" name="msg" placeholder="Message">
+<input style="color: aliceblue;" id = "buttonInput" type = "submit" value="Send">
+</div></center>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background: url(https://image.shutterstock.com/image-illustration/abstract-indigo-dark-blue-navy-260nw-742445947.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 600%;
+    }
+    .botText{
+        color: rgb(0, 0, 0);
+    }
+    input{
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: sans-serif;
+        box-sizing: border-box;
+        background: linear-gradient(90deg, #010742,#cf2323,#ffeb3b,#03a9f4);
+        background-size: 400%;
+        border-radius: 30px;
+        z-index: 1;
+
+    
+    }
+    var{
+        color: aliceblue;
+    }
+
+
+
+
+
+
+
+
+
+
+</style>
+<script>
+function getBotResponse(){
+var rawText = $("#textInput").val();
+var userHtml = '<p class = "userText"><span>' + rawText + '</span></p>';
+$("#textInput").val("");
+$("#chatbox").append(userHtml);
+document.getElementById('userInput').scrollIntoView({block:'start',behaviour:'smooth'});
+$.get("/get", {msg:rawText }).done(function(data) {
+var botHtml = '<p class ="botText"><span>' + data + '</span></p>';
+$("#chatbox").append(botHtml);
+document.getElementById('userInput').scrollIntoView({block : 'start',behaviour:'smooth'});
+});
+}
+$("#textInput").keypress(function(e) {
+if(e.which == 13) {
+getBotResponse();
+}
+});
+$("#buttonInput").click(function() {
+getBotResponse();
+})
+</script>
+</div>
+</body>
+</html>
